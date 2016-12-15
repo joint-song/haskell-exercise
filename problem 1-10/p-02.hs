@@ -10,6 +10,6 @@
 myButLast :: [a] -> a
 myButLast [] = error "empty list error."
 myButLast [_] = error "too few error."
-myButLast (x:xs) = if (length xs == 1)
-    then x
-    else myButLast xs
+myButLast (x:xs)
+    | length xs == 1 = x
+    | otherwise = myButLast xs

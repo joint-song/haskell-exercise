@@ -22,6 +22,6 @@ myLast'' xs = myLast (tail xs)
 -- solution 2
 myLast''' :: [a] -> a
 myLast''' [] = error "empty list error."
-myLast''' (x:xs) = if (length xs == 0)
-    then x
-    else myLast2 xs
+myLast''' (x:xs)
+    | length xs == 0 = x
+    | otherwise myLast''' xs
