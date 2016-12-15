@@ -16,7 +16,7 @@ myLast' xs = if (null xs) || (length xs == 0)
 -- solution 1 (better)
 myLast'' :: [a] -> a
 myLast'' [] = error "empty list error."
-myLast'' (x:[]) = x
+myLast'' [x] = x
 myLast'' xs = myLast (tail xs)
 
 -- solution 2
