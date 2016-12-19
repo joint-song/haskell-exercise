@@ -7,7 +7,7 @@
 -- Prelude> elementAt "haskell" 5
 -- 'e'
 
-elementAt :: (Num i, Ord i) => [a] -> i -> a
+elementAt :: [a] -> Int -> a
 elementAt [] _ = error "empty list error or index is out of range"
 elementAt (x:xs) i
     | i <= 0 = error "index should be positive integer or element is not found"
